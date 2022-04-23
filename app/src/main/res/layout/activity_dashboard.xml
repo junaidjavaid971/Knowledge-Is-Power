@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_100sdp">
+
+            <FrameLayout
+                android:id="@+id/flMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivGroups"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:elevation="@dimen/_5sdp"
+                android:focusable="true"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_group"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/ivCurrentLoc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/primaryColor" />
+
+            <ImageView
+                android:id="@+id/ivCurrentLoc"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:elevation="@dimen/_5sdp"
+                android:focusable="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_target"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/primaryColor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/roundbutton"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/search_a_delivery_location"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/ic_search"
+            app:drawableTint="@color/primaryColor" />
+
+
+        <ImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/primaryColor" />
+
+        <ImageView
+            android:id="@+id/ivChat"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_chat"
+            app:tint="@color/primaryColor" />
+
+        <include
+            android:id="@+id/bottomSheet"
+            layout="@layout/location_search_bottomsheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

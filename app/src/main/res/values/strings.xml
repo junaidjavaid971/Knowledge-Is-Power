@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Knowledge Is Power</string>
+    <string name="str_getStarted">Get Started</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_welcome">Welcome!</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="str_hello">Hello</string>
+    <string name="abc124">abc124</string>
+    <string name="str_proceed">Proceed</string>
+    <string name="str_next">Next</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="full_name">Full Name</string>
+    <string name="how_can_we_contact_you">How can we contact you?</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="signup">Sign Up</string>
+    <string name="tagline">Group Sharing App to Plot the Map</string>
+    <string name="oneliner">Create groups and pin point locations together, add comments, photos and share your knowledge.</string>
+    <string name="map_key">AIzaSyBTnslVdJY2LVQQ-uizXx0cEPxYKJKgk0s</string>
+    <string name="str_groupMembers">Group Members</string>
+    <string name="member_since_14_june_2021">Member Since: 14 June, 2021</string>
+    <string name="srt_addNewMember">Add New Member</string>
+    <string name="search_a_delivery_location">Search a Delivery Location</string>
+</resources>
