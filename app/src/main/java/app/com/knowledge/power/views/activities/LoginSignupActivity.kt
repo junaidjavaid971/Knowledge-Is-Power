@@ -24,11 +24,8 @@ class LoginSignupActivity : BaseActivity(),
         finish()
     }
 
-    override fun onNextButtonClicked(user: User?, level: Int) {
+    override fun onNextButtonClicked(value: String, level: Int) {
         when (level) {
-            1 -> {
-                replaceFragment(PasswordFragment(this), "PasswordFragment")
-            }
             2 -> {
                 replaceFragment(NameFragment(this), "PasswordFragment")
             }
@@ -39,5 +36,9 @@ class LoginSignupActivity : BaseActivity(),
                 replaceFragment(ProfilePictureFragment(this), "PasswordFragment")
             }
         }
+    }
+
+    override fun onEmailFragmentClicked(email: String, isSignedUp: Boolean) {
+        replaceFragment(PasswordFragment(this , isSignedUp), "PasswordFragment")
     }
 }

@@ -21,91 +21,89 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvSearchLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:elevation="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/search_a_delivery_location"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal"
+                app:drawableStartCompat="@drawable/ic_search"
+                app:drawableTint="@color/primaryColor"
+                app:layout_constraintEnd_toStartOf="@id/ivGroups"
+                app:layout_constraintStart_toEndOf="@id/ivSettings"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:elevation="@dimen/_5sdp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/tapToAddComent"
+                android:textColor="@color/lightTextColor"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@id/ivGroups"
+                app:layout_constraintStart_toEndOf="@id/ivSettings"
+                app:layout_constraintTop_toBottomOf="@id/tvSearchLocation" />
+
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primaryColor" />
 
             <ImageView
                 android:id="@+id/ivGroups"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
                 android:background="@drawable/circular_bg"
                 android:backgroundTint="@color/white"
-                android:clickable="true"
                 android:elevation="@dimen/_5sdp"
-                android:focusable="true"
-                android:padding="@dimen/_3sdp"
+                android:padding="@dimen/_1sdp"
                 android:src="@drawable/ic_group"
-                android:visibility="visible"
-                app:layout_constraintBottom_toTopOf="@id/ivCurrentLoc"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:tint="@color/primaryColor" />
-
-            <ImageView
-                android:id="@+id/ivCurrentLoc"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_60sdp"
-                android:background="@drawable/circular_bg"
-                android:backgroundTint="@color/white"
-                android:clickable="true"
-                android:elevation="@dimen/_5sdp"
-                android:focusable="true"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_target"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/primaryColor" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/roundbutton"
-            android:backgroundTint="@color/white"
-            android:drawablePadding="@dimen/_10sdp"
-            android:elevation="@dimen/_5sdp"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:paddingVertical="@dimen/_5sdp"
-            android:text="@string/search_a_delivery_location"
-            android:textColor="@color/primaryColor"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="normal"
-            app:drawableStartCompat="@drawable/ic_search"
-            app:drawableTint="@color/primaryColor" />
-
-
-        <ImageView
-            android:id="@+id/ivSettings"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/white"
-            android:elevation="@dimen/_5sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_settings"
-            app:tint="@color/primaryColor" />
-
-        <ImageView
-            android:id="@+id/ivChat"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:layout_gravity="end"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/white"
-            android:elevation="@dimen/_5sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_chat"
-            app:tint="@color/primaryColor" />
 
         <include
             android:id="@+id/bottomSheet"

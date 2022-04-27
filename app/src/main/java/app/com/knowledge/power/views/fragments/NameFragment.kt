@@ -26,7 +26,7 @@ class NameFragment(var callback: NextFragmentCallback) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNext.setOnClickListener {
-            callback.onNextButtonClicked(user = User(), 3)
+            callback.onNextButtonClicked("", 3)
         }
     }
 }

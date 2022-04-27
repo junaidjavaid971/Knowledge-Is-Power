@@ -41,7 +41,7 @@ class MembersAdapter : RecyclerView.Adapter<MembersAdapter.ViewHolder> {
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return 5
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

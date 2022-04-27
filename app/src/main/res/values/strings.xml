@@ -22,4 +22,22 @@
     <string name="member_since_14_june_2021">Member Since: 14 June, 2021</string>
     <string name="srt_addNewMember">Add New Member</string>
     <string name="search_a_delivery_location">Search a Delivery Location</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="back">Back</string>
+    <string name="invitationDesc">Share this code with the people whom you want to include in your Group:</string>
+    <string name="the_invitation_code_will_be_expired_in_3_days">The invitation code will be expired in 3 days</string>
+    <string name="sendInvite">Send Invite</string>
+    <string name="set_a_name_for_your_new_group">Set a name for your new Group</string>
+    <string name="createGroup">Create Group</string>
+    <string name="join_group">Join Group</string>
+    <string name="you_can_post_your_comments_or_pictures_within_a_group_your_comments_will_be_visible_to_all_group_members">You can post your comments or pictures within a group. Your comments will be visible to all group members.</string>
+    <string name="create_or_join_a_group">Create or Join a Group</string>
+    <string name="tapToAddComent">Tap anywhere on the map to add your comment</string>
+    <string name="str_enterValidEmail">Please enter a valid email address</string>
+    <string name="str_enterValidPassword">Please set a strong password</string>
+    <string name="str_enterValidName">Please enter a your full name</string>
+    <string name="str_enterValidContactNumber">Your contact number is either empty or invalid.</string>
+    <string name="str_setProfilePicture">Please set a profile picture to proceed.</string>
+    <string name="password">Password</string>
 </resources>

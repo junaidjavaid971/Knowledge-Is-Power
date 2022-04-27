@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil
 import app.com.knowledge.power.R
 import app.com.knowledge.power.databinding.ActivitySplashBinding
 import app.com.knowledge.power.views.BaseActivity
+import com.google.firebase.auth.FirebaseAuth
 
 
 @SuppressLint("CustomSplashScreen")
@@ -28,16 +29,25 @@ class SplashActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         makeFullScreen()
         binding.tvVersion.text = "App Version: v" + app.com.knowledge.power.BuildConfig.VERSION_NAME
+    }
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(
-                Intent(
-                    this@SplashActivity,
-                    MainActivity::class.java
-                ).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            )
-        }, 2000)
+
+    override fun onStart() {
+        super.onStart()
+
+        val auth = FirebaseAuth.getInstance()
+        if (auth.currentUser == null) {
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                startActivity(
+                    Intent(
+                        this@SplashActivity,
+                        LoginSignupActivity::class.java
+                    ).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+            }, 2000)
+        }
     }
 }

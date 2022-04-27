@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import app.com.knowledge.power.R
 import app.com.knowledge.power.databinding.FragmentProfilePictureBinding
 import app.com.knowledge.power.interfaces.NextFragmentCallback
+import app.com.knowledge.power.views.activities.CreateJoinGroupActivity
 import app.com.knowledge.power.views.activities.DashboardActivity
 import app.com.knowledge.power.views.activities.MainActivity
 
@@ -21,7 +22,8 @@ class ProfilePictureFragment(var callback: NextFragmentCallback) : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_picture, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_profile_picture, container, false)
         return binding.root
     }
 
@@ -30,7 +32,7 @@ class ProfilePictureFragment(var callback: NextFragmentCallback) : Fragment() {
 
 
         binding.btnNext.setOnClickListener {
-            startActivity(Intent(requireActivity(), DashboardActivity::class.java))
+            startActivity(Intent(requireActivity(), CreateJoinGroupActivity::class.java))
         }
     }
 }

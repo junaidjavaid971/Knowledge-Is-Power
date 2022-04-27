@@ -117,6 +117,7 @@
                 tools:listitem="@layout/group_member_item_row" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutAddMember"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_5sdp"

@@ -1,10 +1,13 @@
 package app.com.knowledge.power.views.activities
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.TextureView
 import android.view.View
 import android.view.WindowManager
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -43,7 +46,15 @@ class DashboardActivity : BaseActivity() {
             dialogBuilder.setView(dialogView)
 
             val rvGroups: RecyclerView = dialogView.findViewById(R.id.rvGroups)
+            val btnJoinGroup: TextView = dialogView.findViewById(R.id.btnJoinGroup)
+            val btnCreateGroup: TextView = dialogView.findViewById(R.id.btnCreateGroup)
 
+            btnJoinGroup.setOnClickListener {
+                startActivity(Intent(this@DashboardActivity, JoinGroupActivity::class.java))
+            }
+            btnCreateGroup.setOnClickListener {
+                startActivity(Intent(this@DashboardActivity, CreateGroupActivity::class.java))
+            }
             val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
             val memberAdapter = MembersAdapter(this)
             rvGroups.layoutManager = linearLayoutManager
@@ -52,7 +63,10 @@ class DashboardActivity : BaseActivity() {
             val alertDialog: AlertDialog = dialogBuilder.create()
             alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             alertDialog.show()
+        }
 
+        binding.bottomSheet.layoutAddMember.setOnClickListener {
+            startActivity(Intent(this@DashboardActivity, InvitationActivity::class.java))
         }
     }
 

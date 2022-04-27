@@ -35,6 +35,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
 
         <EditText
+            android:id="@+id/edEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_40sdp"
@@ -48,6 +49,18 @@
             android:textColorHint="@color/formColor"
             android:textSize="@dimen/_15ssp"
             app:layout_constraintTop_toBottomOf="@id/tvEnterEmail" />
+
+        <TextView
+            android:id="@+id/tvErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/str_enterValidEmail"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/edEmail"
+            app:layout_constraintStart_toStartOf="@id/edEmail"
+            app:layout_constraintTop_toBottomOf="@id/edEmail" />
 
         <TextView
             android:id="@+id/btnNext"
