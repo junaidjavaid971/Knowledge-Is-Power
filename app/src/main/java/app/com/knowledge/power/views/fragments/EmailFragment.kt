@@ -1,19 +1,20 @@
 package app.com.knowledge.power.views.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import app.com.knowledge.power.interfaces.NextFragmentCallback
+import androidx.fragment.app.Fragment
 import app.com.knowledge.power.R
 import app.com.knowledge.power.databinding.FragmentEmailBinding
-import app.com.knowledge.power.models.User
+import app.com.knowledge.power.interfaces.NextFragmentCallback
 import app.com.knowledge.power.utils.Commons
-import com.google.android.gms.common.internal.service.Common
 import com.google.firebase.auth.FirebaseAuth
+
 
 class EmailFragment(var callback: NextFragmentCallback) : Fragment() {
     lateinit var binding: FragmentEmailBinding
@@ -40,13 +41,25 @@ class EmailFragment(var callback: NextFragmentCallback) : Fragment() {
                 );
                 return@setOnClickListener
             }
-            val methods = FirebaseAuth.getInstance()
-                .fetchSignInMethodsForEmail(binding.edEmail.text.toString())
-
-            callback.onEmailFragmentClicked(
-                binding.edEmail.text.toString(),
-                methods.result.signInMethods?.isEmpty()!!
-            )
+            Commons.showProgress(activity = activity as AppCompatActivity)
+            FirebaseAuth.getInstance()
+                .fetchSignInMethodsForEmail(binding.edEmail.text.toString()).addOnCompleteListener {
+                    Commons.hideProgress()
+                    Commons.addLog(it.result?.signInMethods?.size.toString())
+                    if (it.result.signInMethods?.isNotEmpty()!!) {
+                        callback.onEmailFragmentClicked(
+                            binding.edEmail.text.toString(),
+                            true
+                        )
+                    } else {
+                        callback.onEmailFragmentClicked(
+                            binding.edEmail.text.toString(),
+                            false
+                        )
+                    }
+                }.addOnFailureListener {
+                    Commons.hideProgress()
+                }
         }
     }
 }

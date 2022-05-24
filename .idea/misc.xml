@@ -5,16 +5,20 @@
       <map>
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable-v24/circular_bg.xml" value="0.1685" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/back_arrow_color_blue.xml" value="0.1575" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/bg_button_subscription.xml" value="0.131" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/bg_color.xml" value="0.1685" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/btn_bg.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/circular_bg_outlined.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/default_dot.xml" value="0.1685" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/dialog_bg.xml" value="0.131" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/disclaimer_layout_bg.xml" value="0.1335" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_attachment.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_back.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_camera.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_dot.xml" value="0.1685" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_gallery.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_logo_background.xml" value="0.1685" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_pin.xml" value="0.202" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_search.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_send.xml" value="0.1575" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/ic_target.xml" value="0.1575" />
@@ -26,15 +30,24 @@
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/rounded_corner.xml" value="0.1685" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/selected_dot.xml" value="0.1685" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/drawable/tab_selector.xml" value="0.1685" />
-        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_comments.xml" value="0.176" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_categories.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_comments.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_create_group.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_create_join_group.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_image_caption.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_invitation.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_join_group.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_login_signup.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/activity_view_image.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/alert_dialog_layout.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/categories_bottom_sheet.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/category_item_row.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/confirmation_dialog_layout.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/dialog_change_group_name.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/dialog_update_message.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/dialog_wait.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/fragment_contact_number.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/fragment_email.xml" value="0.264" />
@@ -43,12 +56,14 @@
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/fragment_password.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/fragment_profile_picture.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/group_dialog_row.xml" value="0.264" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/group_layout_item.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/group_member_item_row.xml" value="0.264" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/group_name_layout.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/layout_header.xml" value="0.2" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/location_search_bottomsheet.xml" value="0.264" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/logout_alert_dialog.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/message_left.xml" value="0.23802083333333332" />
-        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/message_right.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/message_right.xml" value="0.176" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/layout/viewpager_item.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/KnowledgeIsPower/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.1685" />
       </map>

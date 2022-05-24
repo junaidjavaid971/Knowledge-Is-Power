@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.CreateGroupActivity">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/layout_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@null"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/categoryName"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/primaryColorDark"
+            android:textColorHint="@color/primaryColorDark"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toBottomOf="@id/ivAddCategory"
+            app:layout_constraintEnd_toStartOf="@+id/ivAddCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+        <ImageView
+            android:id="@+id/ivAddCategory"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edCategoryName"
+            app:tint="@color/primaryColorDark" />
+
+        <TextView
+            android:id="@+id/tvPickColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/pickColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@+id/ivSelectedColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edCategoryName" />
+
+        <ImageView
+            android:id="@+id/ivColor"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="0dp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_color"
+            app:layout_constraintBottom_toBottomOf="@id/tvPickColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvPickColor"
+            app:tint="@color/primaryColorDark" />
+
+        <ImageView
+            android:id="@+id/ivSelectedColor"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_circle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvPickColor"
+            app:layout_constraintEnd_toStartOf="@id/ivColor"
+            app:layout_constraintTop_toTopOf="@id/tvPickColor"
+            app:tint="@color/primaryColorDark" />
+
+        <TextView
+            android:id="@+id/tvFreqNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/lightGray"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/categories"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPickColor" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqNames"
+            tools:itemCount="5"
+            tools:listitem="@layout/group_member_item_row" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnim"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFreqNames"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty"
+            app:lottie_repeatMode="reverse" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

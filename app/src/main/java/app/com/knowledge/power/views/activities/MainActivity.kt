@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import app.com.knowledge.power.R
 import app.com.knowledge.power.adapters.ViewAdapter
 import app.com.knowledge.power.databinding.ActivityMainBinding
+import app.com.knowledge.power.utils.SharePrefData
 import app.com.knowledge.power.views.BaseActivity
 
 class MainActivity : BaseActivity() {
@@ -20,6 +21,8 @@ class MainActivity : BaseActivity() {
         binding.viewPager.adapter = viewAdapter
         binding.dot2.setViewPager(binding.viewPager)
 
+
+        SharePrefData.getInstance().setPrefBoolean(this@MainActivity, "introShown", true)
 
         binding.btnGetStarted.setOnClickListener {
             startActivity(Intent(this@MainActivity, LoginSignupActivity::class.java))

@@ -17,7 +17,7 @@
         android:layout_marginVertical="@dimen/_5sdp"
         android:fontFamily="@font/falling_sky"
         android:padding="@dimen/_5sdp"
-        android:text="@string/app_name"
+        android:textSize="@dimen/_14ssp"
         android:textColor="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

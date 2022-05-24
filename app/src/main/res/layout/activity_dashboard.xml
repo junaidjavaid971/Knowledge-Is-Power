@@ -13,11 +13,12 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/_100sdp">
 
-            <FrameLayout
-                android:id="@+id/flMap"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_2sdp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -26,13 +27,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_5sdp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
             android:paddingVertical="@dimen/_10sdp">
 
             <TextView
                 android:id="@+id/tvSearchLocation"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="@drawable/roundbutton"
@@ -53,6 +56,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
@@ -71,20 +75,20 @@
                 app:layout_constraintStart_toEndOf="@id/ivSettings"
                 app:layout_constraintTop_toBottomOf="@id/tvSearchLocation" />
 
-
             <ImageView
                 android:id="@+id/ivSettings"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:background="@drawable/circular_bg"
                 android:backgroundTint="@color/white"
                 android:elevation="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_settings"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSearchLocation"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSearchLocation"
                 app:tint="@color/primaryColor" />
 
             <ImageView
@@ -93,16 +97,50 @@
                 android:layout_height="@dimen/_25sdp"
                 android:layout_gravity="end"
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/circular_bg"
                 android:backgroundTint="@color/white"
                 android:elevation="@dimen/_5sdp"
                 android:padding="@dimen/_1sdp"
                 android:src="@drawable/ic_group"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSearchLocation"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSearchLocation"
                 app:tint="@color/primaryColor" />
 
+            <ImageView
+                android:id="@+id/ivTarget"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_target"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGroups"
+                app:tint="@color/primaryColor" />
+
+            <ImageView
+                android:id="@+id/ivLayers"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/white"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_layers"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGroups"
+                app:tint="@color/primaryColor" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <include

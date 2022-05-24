@@ -15,7 +15,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/tvGroupName"
+            android:id="@+id/edGroupName"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="@dimen/_5sdp"
@@ -43,7 +43,7 @@
             android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_check"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tvGroupName"
+            app:layout_constraintTop_toTopOf="@id/edGroupName"
             app:tint="@color/primaryColorDark" />
 
         <TextView
@@ -57,7 +57,7 @@
             android:text="FREQUENTLY NAMED"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvGroupName" />
+            app:layout_constraintTop_toBottomOf="@id/edGroupName" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSuggestions"

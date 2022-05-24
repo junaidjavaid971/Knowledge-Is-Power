@@ -12,12 +12,17 @@ import app.com.knowledge.power.views.fragments.*
 class LoginSignupActivity : BaseActivity(),
     NextFragmentCallback {
     lateinit var binding: ActivityLoginSignupBinding
+    val user = User()
+    var password = ""
+    var isSignedUp = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login_signup)
 
-        makeFullScreen()
+//        makeFullScreen()
         replaceFragment(EmailFragment(this), "EmailFragment")
+//        replaceFragment(ProfilePictureFragment(this, user, password), "EmailFragment")
     }
 
     override fun onBackPressed() {
@@ -27,18 +32,23 @@ class LoginSignupActivity : BaseActivity(),
     override fun onNextButtonClicked(value: String, level: Int) {
         when (level) {
             2 -> {
+                password = value
                 replaceFragment(NameFragment(this), "PasswordFragment")
             }
             3 -> {
+                user.name = value
                 replaceFragment(ContactNumberFragment(this), "PasswordFragment")
             }
             4 -> {
-                replaceFragment(ProfilePictureFragment(this), "PasswordFragment")
+                user.contactNumber = value
+                replaceFragment(ProfilePictureFragment(this, user, password), "PasswordFragment")
             }
         }
     }
 
     override fun onEmailFragmentClicked(email: String, isSignedUp: Boolean) {
-        replaceFragment(PasswordFragment(this , isSignedUp), "PasswordFragment")
+        this.isSignedUp = isSignedUp
+        user.email = email
+        replaceFragment(PasswordFragment(this, isSignedUp, email), "PasswordFragment")
     }
 }

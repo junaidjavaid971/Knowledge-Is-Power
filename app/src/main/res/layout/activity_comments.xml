@@ -14,29 +14,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/edUsername"
+            android:id="@+id/tvPlaceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/jane_cap"
-            android:text="[Mccafee Street]"
             android:textColor="@color/primaryColorDark"
             android:textSize="@dimen/_20ssp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/headerLayout" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
+        <LinearLayout
+            android:id="@+id/mesagesLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginBottom="8dp"
-            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/message"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edUsername" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPlaceName">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible" />
+        </LinearLayout>
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animationView"
@@ -47,7 +53,7 @@
             app:layout_constraintBottom_toTopOf="@+id/message"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edUsername"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlaceName"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/read" />
@@ -60,8 +66,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/btn_bg"
             android:backgroundTint="#d5d5d5"
-            android:gravity="left|center_vertical"
-            android:hint="Type your comment.."
+            android:hint="@string/type_your_comment"
             android:padding="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ivAttachment"
@@ -71,6 +76,9 @@
             android:id="@+id/ivAttachment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="@dimen/_10sdp"
             app:drawableRightCompat="@drawable/ic_attachment"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -82,6 +90,9 @@
             android:id="@+id/send_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="@dimen/_10sdp"
             app:drawableRightCompat="@drawable/ic_send"
             app:layout_constraintBottom_toBottomOf="parent"

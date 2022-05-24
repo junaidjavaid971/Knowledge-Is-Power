@@ -22,10 +22,16 @@ class CreateJoinGroupActivity : AppCompatActivity() {
 
     private fun manageClicks() {
         binding.btnCreateGroup.setOnClickListener {
-            startActivity(Intent(this@CreateJoinGroupActivity, CreateGroupActivity::class.java))
+            startActivity(
+                Intent(
+                    this@CreateJoinGroupActivity,
+                    CreateGroupActivity::class.java
+                ).putExtra("fromLogin", true)
+            )
         }
         binding.btnJoinGroup.setOnClickListener {
             startActivity(Intent(this@CreateJoinGroupActivity, JoinGroupActivity::class.java))
         }
+
     }
 }

@@ -11,7 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import app.com.knowledge.power.models.Member
 import java.util.ArrayList
 
-class GroupSuggestionsAdapter(var suggestionsList: ArrayList<String>, var context: Context) :
+class GroupSuggestionsAdapter(
+    var suggestionsList: ArrayList<String>,
+    var context: Context,
+    var callback: GroupCallback
+) :
     RecyclerView.Adapter<GroupSuggestionsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -27,11 +31,19 @@ class GroupSuggestionsAdapter(var suggestionsList: ArrayList<String>, var contex
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (suggestionsList.isNotEmpty()) {
             holder.tvGroupName.text = suggestionsList[position]
+
+            holder.itemView.setOnClickListener {
+                callback.onGroupNameClicked(suggestionsList[position])
+            }
         }
     }
 
+    interface GroupCallback {
+        fun onGroupNameClicked(groupName: String)
+    }
+
     override fun getItemCount(): Int {
-        return 5
+        return suggestionsList.size
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

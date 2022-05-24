@@ -35,6 +35,7 @@
             android:cursorVisible="true"
             android:inputType="text"
             android:padding="@dimen/_10sdp"
+            android:capitalize="characters"
             android:textAllCaps="true"
             android:textColor="@color/primaryColorDark"
             android:textSize="18sp"
